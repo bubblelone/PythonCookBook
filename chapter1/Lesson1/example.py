@@ -42,10 +42,18 @@ _, shares, price, _ = data
 正则表达式中任何一个字符，都有一种规则
 提取html中酒店名称， 两端固定内容，提取中间的酒店名称，
 .*?aa  .*?  这两种的不同结果，机制是怎么样的， 贪婪、非贪婪
-a = re.findall('a.*c', 'abcabbcccabbbbccc')
-a = re.findall('a.*?c', 'abcabbcccabbbbccc')
-a = re.findall('ab*', 'abbbbbbbccc')
-a = re.findall('ab*?', 'abbbbbbbccc')
+a = re.findall('a.*c', 'abcabbcccabbbbccc')  .*c结尾，贪婪，匹配字符，一路匹配过去，直到遇到最后一个c，结果为['abcabbcccabbbbccc']
+
+a = re.findall('a.*?c', 'abcabbcccabbbbccc') .*?c结尾 ，非贪婪，匹配字符，一旦遇到c，就结束字符匹配，然后继续用改表达式往后匹配
+，结果为['abc', 'abbc', 'abbbbc']
+
+
+a = re.findall('ab*', 'abbbbbbbccc')   b*结尾，贪婪，匹配所有b，结果为 abbbbbbb
+a = re.findall('ab*?', 'abbbbbbbccc')   b*?结尾，非贪婪，不匹配，最终结果为a
+
+a = re.findall('^abc', 'abcabbcccabbbbccc')  以abc开头的字符
+
+
 
 
 
