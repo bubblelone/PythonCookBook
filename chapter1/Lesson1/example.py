@@ -51,7 +51,9 @@ a = re.findall('a.*?c', 'abcabbcccabbbbccc') .*?c结尾 ，非贪婪，匹配字
 a = re.findall('ab*', 'abbbbbbbccc')   b*结尾，贪婪，匹配所有b，结果为 abbbbbbb
 a = re.findall('ab*?', 'abbbbbbbccc')   b*?结尾，非贪婪，不匹配，最终结果为a
 
-a = re.findall('^abc', 'abcabbcccabbbbccc')  以abc开头的字符
+a = re.findall('^abc', 'abcabbcccabbbbccc')  以abc开头的字符,结果为abc
+a = re.findall('abc$', 'abcabbcccabbbbabc')  以abc结尾的字符,结果为abc
+
 
 
 
