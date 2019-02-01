@@ -55,8 +55,4 @@ a = re.findall('^abc', 'abcabbcccabbbbccc')  以abc开头的字符,结果为abc
 a = re.findall('abc$', 'abcabbcccabbbbabc')  以abc结尾的字符,结果为abc
 
 
-
-
-
-
 """
