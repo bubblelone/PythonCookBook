@@ -1,0 +1,18 @@
+from collections import0python
+from collections import1
+from collectionspython import2
+from collections import3
+from collectionspython import4
+from collections import5 deque
+from collections import6 deque
+from collections import7 deque
+from collections import8 deque
+from collections import9 deque
+from collections import10 python
+from collections import11 deque
+from collections import12 deque
+from collections import13 deque
+from collections import14 deque
+from collections import15 deque
+from collections import16python deque
+from collections import17 deque

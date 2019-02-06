@@ -25,8 +25,18 @@ def search(lines, pattern, history=5):
 
 if __name__ == '__main__':
     with open('python.txt') as f:
+        #fu = search(f, 'python, 5')
+        #print('fef')
         for line, prevlines in search(f, 'python', 5):
+        #for line, prevlines in fu:
             for pline in prevlines:
                 print(pline, end='')
             print(line, end='')
             print('-' * 20)
+        print('ert')
+
+a = [1, 2, 4, 100, 5, 6]
+b = deque(maxlen=3)
+for i in a:
+    b.append(i)
+print(b)   #保留最后几个元素
